@@ -1,30 +1,40 @@
 {
-    "name": "divineomega/php-summary",
-    "type": "library",
-    "description": "PHP Summarization Library",
-    "keywords": ["summarizing", "summary", "summarization", "summarization library", "library", "php"],
-    "homepage": "https://github.com/DivineOmega/php-summary",
-    "license": "LGPL-3.0-only",
-    "require": {
-        "php": ">=7.1"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^7.0 || ^8.0",
-        "php-coveralls/php-coveralls": "^2.1"
-    },
-    "autoload": {
-        "psr-4": {
-            "DivineOmega\\PHPSummary\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "DivineOmega\\PHPSummary\\Tests\\": "tests/Unit/"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
+  "name": "jord-jd/php-summary",
+  "type": "library",
+  "description": "PHP Summarization Library",
+  "keywords": [
+    "summarizing",
+    "summary",
+    "summarization",
+    "summarization library",
+    "library",
+    "php"
+  ],
+  "homepage": "https://github.com/Jord-JD/php-summary",
+  "license": "LGPL-3.0-only",
+  "require": {
+    "php": ">=7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.0 || ^8.0",
+    "php-coveralls/php-coveralls": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "DivineOmega\\PHPSummary\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DivineOmega\\PHPSummary\\Tests\\": "tests/Unit/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "4.0-dev"
+    }
+  },
+  "replace": {
+    "divineomega/php-summary": "self.version"
+  }
 }

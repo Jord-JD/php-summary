@@ -1,9 +1,9 @@
 # PHP Summary
 
-[![Build Status](https://travis-ci.org/DivineOmega/php-summary.svg?branch=master)](https://travis-ci.org/DivineOmega/php-summary)
-[![Coverage Status](https://coveralls.io/repos/github/DivineOmega/php-summary/badge.svg?branch=master)](https://coveralls.io/github/DivineOmega/php-summary?branch=master)
+[![Build Status](https://travis-ci.org/Jord-JD/php-summary.svg?branch=master)](https://travis-ci.org/Jord-JD/php-summary)
+[![Coverage Status](https://coveralls.io/repos/github/Jord-JD/php-summary/badge.svg?branch=master)](https://coveralls.io/github/Jord-JD/php-summary?branch=master)
 [![StyleCI](https://styleci.io/repos/47579407/shield?branch=master)](https://styleci.io/repos/47579407)
-![Packagist](https://img.shields.io/packagist/dt/DivineOmega/php-summary.svg)
+![Packagist](https://img.shields.io/packagist/dt/Jord-JD/php-summary.svg)
 
 A PHP library to automatically summarise text using a naive summerisation algorithm.
 
@@ -16,7 +16,7 @@ For more details on this algorithm, see this [blog post by Shlomi Babluki](http:
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require divineomega/php-summary
+composer require jord-jd/php-summary
 ```
 
 ## Usage
