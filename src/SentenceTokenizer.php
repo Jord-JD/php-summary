@@ -1,6 +1,6 @@
 <?php
 
-namespace DivineOmega\PHPSummary;
+namespace JordJD\PHPSummary;
 
 class SentenceTokenizer
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace DivineOmega\PHPSummary\Tests;
+namespace JordJD\PHPSummary\Tests;
 
-use DivineOmega\PHPSummary\SentenceTokenizer;
+use JordJD\PHPSummary\SentenceTokenizer;
 use PHPUnit\Framework\TestCase;
 
 class SentenceTokenizerTest extends TestCase

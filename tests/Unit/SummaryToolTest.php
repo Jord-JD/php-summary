@@ -1,8 +1,8 @@
 <?php
 
-namespace DivineOmega\PHPSummary\Tests;
+namespace JordJD\PHPSummary\Tests;
 
-use DivineOmega\PHPSummary\SummaryTool;
+use JordJD\PHPSummary\SummaryTool;
 use PHPUnit\Framework\TestCase;
 
 class SummaryToolTest extends TestCase

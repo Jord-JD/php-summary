@@ -21,17 +21,17 @@
   },
   "autoload": {
     "psr-4": {
-      "DivineOmega\\PHPSummary\\": "src/"
+      "JordJD\\PHPSummary\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "DivineOmega\\PHPSummary\\Tests\\": "tests/Unit/"
+      "JordJD\\PHPSummary\\Tests\\": "tests/Unit/"
     }
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "4.0-dev"
+      "dev-master": "5.0-dev"
     }
   },
   "replace": {
