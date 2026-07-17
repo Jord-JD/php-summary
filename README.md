@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/Jord-JD/php-summary.svg?branch=master)](https://travis-ci.org/Jord-JD/php-summary)
 [![Coverage Status](https://coveralls.io/repos/github/Jord-JD/php-summary/badge.svg?branch=master)](https://coveralls.io/github/Jord-JD/php-summary?branch=master)
-[![StyleCI](https://styleci.io/repos/47579407/shield?branch=master)](https://styleci.io/repos/47579407)
 ![Packagist](https://img.shields.io/packagist/dt/Jord-JD/php-summary.svg)
 
 A PHP library to automatically summarise text using a naive summerisation algorithm.
