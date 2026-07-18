@@ -13,24 +13,13 @@ class SentenceTokenizer
 
     public function getSentences(): array
     {
-        if (!trim($this->content)) {
+        if ($this->content === null || !trim($this->content)) {
             return [];
         }
 
-        $contentParts = preg_split("/([\.\!\?])+/", $this->content, -1, PREG_SPLIT_DELIM_CAPTURE);
-
-        $sentences = [];
-
-        for ($i = 0; $i < count($contentParts); $i += 2) {
-            if (!isset($contentParts[$i + 1])) {
-                break;
-            }
-
-            $sentence = $contentParts[$i].$contentParts[$i + 1];
-            $sentence = trim($sentence);
-            $sentences[] = $sentence;
-        }
-
-        return $sentences;
+        return array_map(
+            'trim',
+            preg_split('/(?<=[.!?])(?:\s+|$)/', trim($this->content), -1, PREG_SPLIT_NO_EMPTY)
+        );
     }
 }

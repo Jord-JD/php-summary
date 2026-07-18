@@ -12,7 +12,11 @@ class SentenceTokenizerTest extends TestCase
         return [
             [
                 'content contents',
-                [],
+                ['content contents'],
+            ],
+            [
+                'First sentence! Second sentence without punctuation',
+                ['First sentence!', 'Second sentence without punctuation'],
             ],
             [
                 '',
@@ -41,6 +45,7 @@ class SentenceTokenizerTest extends TestCase
     /**
      * @dataProvider contentDataProvider
      */
+    #[\PHPUnit\Framework\Attributes\DataProvider('contentDataProvider')]
     public function testSetContent($content, $expected)
     {
         $sentenceTokenizer = new SentenceTokenizer();
