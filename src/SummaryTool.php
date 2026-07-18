@@ -13,7 +13,11 @@ class SummaryTool
 
     private function getParagraphs(string $content): array
     {
-        return explode(PHP_EOL.PHP_EOL, $content);
+        if (!trim($content)) {
+            return [];
+        }
+
+        return preg_split('/(?:\r\n|\r|\n){2,}/', trim($content), -1, PREG_SPLIT_NO_EMPTY);
     }
 
     private function getSentences(string $content): array
@@ -86,12 +90,12 @@ class SummaryTool
     {
         $sentences = $this->getSentences($paragraph);
 
-        if (count($sentences) < 2) {
+        if (count($sentences) === 0) {
             return null;
         }
 
-        $highestScore = 0;
-        $bestSentence = null;
+        $highestScore = -1;
+        $bestSentence = $sentences[0];
 
         foreach ($sentences as $sentence) {
             foreach ($sentenceRankings as $sentenceRanking) {

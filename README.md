@@ -1,12 +1,11 @@
 # PHP Summary
 
-[![Build Status](https://travis-ci.org/Jord-JD/php-summary.svg?branch=master)](https://travis-ci.org/Jord-JD/php-summary)
-[![Coverage Status](https://coveralls.io/repos/github/Jord-JD/php-summary/badge.svg?branch=master)](https://coveralls.io/github/Jord-JD/php-summary?branch=master)
+[![Tests](https://github.com/Jord-JD/php-summary/actions/workflows/tests.yml/badge.svg)](https://github.com/Jord-JD/php-summary/actions/workflows/tests.yml)
 ![Packagist](https://img.shields.io/packagist/dt/Jord-JD/php-summary.svg)
 
-A PHP library to automatically summarise text using a naive summerisation algorithm.
+A PHP library to automatically summarise text using a naive summarisation algorithm.
 
-This summerisation algorithm in use takes the key sentence from each paragraph. It then strings these resulting sentences together to form the summary.
+This summarisation algorithm takes the key sentence from each paragraph. It then strings these resulting sentences together to form the summary. Single-sentence paragraphs and final sentences without punctuation are supported.
 
 For more details on this algorithm, see this [blog post by Shlomi Babluki](http://thetokenizer.com/2013/04/28/build-your-own-summary-tool/).
 
@@ -22,8 +21,10 @@ composer require jord-jd/php-summary
 
 To use PHP Summary, you should create a new `SummaryTool` object, passing it the text content of your article. You can then call its `getSummary` method to retrieve the shortened summary of the article.
 
-Note: The article content must have its paragraphs seperated by two new line characters.
+Paragraphs may be separated by blank Unix, Windows, or classic Mac lines.
 
 ```php
+use JordJD\PHPSummary\SummaryTool;
+
 $summary = (new SummaryTool($content))->getSummary();
 ```

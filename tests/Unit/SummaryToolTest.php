@@ -22,12 +22,21 @@ class SummaryToolTest extends TestCase
                 '',
                 '',
             ],
+            [
+                'A useful single-sentence document without punctuation',
+                'A useful single-sentence document without punctuation',
+            ],
+            [
+                "First paragraph.\r\n\r\nSecond paragraph.",
+                'First paragraph. Second paragraph.',
+            ],
         ];
     }
 
     /**
      * @dataProvider summaryDataProvider
      */
+    #[\PHPUnit\Framework\Attributes\DataProvider('summaryDataProvider')]
     public function testGetSummary($content, $expected)
     {
         $summaryTool = new SummaryTool($content);
@@ -54,12 +63,17 @@ class SummaryToolTest extends TestCase
                 '',
                 [],
             ],
+            [
+                'A useful single-sentence document.',
+                ['A useful single-sentence document.'],
+            ],
         ];
     }
 
     /**
      * @dataProvider summarySentencesDataProvider
      */
+    #[\PHPUnit\Framework\Attributes\DataProvider('summarySentencesDataProvider')]
     public function testGetSummarySentences($content, $expected)
     {
         $summaryTool = new SummaryTool($content);
